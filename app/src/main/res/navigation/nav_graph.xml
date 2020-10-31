@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.foodrecipes.www.main.MainFragment"
+        tools:layout="@layout/fragment_main"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_koreanFoodFragment"
+            app:destination="@id/koreanFoodFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_foreignFoodFragment"
+            app:destination="@id/foreignFoodFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_chineseFoodFragment"
+            app:destination="@id/chineseFoodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chineseFoodFragment"
+        android:name="com.foodrecipes.www.main.chinese.ChineseFoodFragment"
+        tools:layout="@layout/fragment_chinese"
+        android:label="ChineseFoodFragment" />
+    <fragment
+        android:id="@+id/koreanFoodFragment"
+        android:name="com.foodrecipes.www.main.korean.KoreanFoodFragment"
+        tools:layout="@layout/fragment_korean"
+        android:label="KoreanFoodFragment" />
+    <fragment
+        android:id="@+id/foreignFoodFragment"
+        android:name="com.foodrecipes.www.main.foreign.ForeignFoodFragment"
+        tools:layout="@layout/fragment_foreign"
+        android:label="ForeignFoodFragment" />
+</navigation>
