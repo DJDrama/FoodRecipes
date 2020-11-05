@@ -7,32 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.foodrecipes.www.main.MainFragment"
-        tools:layout="@layout/fragment_main"
-        android:label="MainFragment" >
-        <action
-            android:id="@+id/action_mainFragment_to_koreanFoodFragment"
-            app:destination="@id/koreanFoodFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_foreignFoodFragment"
-            app:destination="@id/foreignFoodFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_chineseFoodFragment"
-            app:destination="@id/chineseFoodFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/chineseFoodFragment"
-        android:name="com.foodrecipes.www.main.chinese.ChineseFoodFragment"
-        tools:layout="@layout/fragment_chinese"
-        android:label="ChineseFoodFragment" />
-    <fragment
-        android:id="@+id/koreanFoodFragment"
-        android:name="com.foodrecipes.www.main.korean.KoreanFoodFragment"
-        tools:layout="@layout/fragment_korean"
-        android:label="KoreanFoodFragment" />
-    <fragment
-        android:id="@+id/foreignFoodFragment"
-        android:name="com.foodrecipes.www.main.foreign.ForeignFoodFragment"
-        tools:layout="@layout/fragment_foreign"
-        android:label="ForeignFoodFragment" />
+        android:name="com.foodrecipes.www.ui.main.MainFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_main" />
 </navigation>

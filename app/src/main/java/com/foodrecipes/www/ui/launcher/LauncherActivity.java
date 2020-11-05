@@ -1,11 +1,13 @@
-package com.foodrecipes.www.launcher;
+package com.foodrecipes.www.ui.launcher;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.foodrecipes.www.MainActivity;
 import com.foodrecipes.www.databinding.ActivityLauncherBinding;
 
 public class LauncherActivity extends AppCompatActivity {
@@ -20,6 +22,11 @@ public class LauncherActivity extends AppCompatActivity {
        binding.tvRegister.setOnClickListener(view -> {
            Intent intent = new Intent(LauncherActivity.this, RegisterActivity.class);
            startActivity(intent);
+       });
+       binding.buttonLogin.setOnClickListener(view -> {
+           Intent intent = new Intent(LauncherActivity.this, MainActivity.class);
+           startActivity(intent);
+           finish();
        });
 
     }

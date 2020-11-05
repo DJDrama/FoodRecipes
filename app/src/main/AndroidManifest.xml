@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodRecipes">
-        <activity android:name=".SplashScreenActivity"
+        <activity android:name=".ui.launcher.SplashScreenActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,9 +20,9 @@
 
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".launcher.LauncherActivity"
+        <activity android:name=".ui.launcher.LauncherActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".launcher.RegisterActivity"
+        <activity android:name=".ui.launcher.RegisterActivity"
             android:screenOrientation="portrait"/>
     </application>
 

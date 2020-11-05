@@ -11,6 +11,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.foodrecipes.www.databinding.ActivityMainBinding;
 
+
 public class MainActivity extends AppCompatActivity {
     private NavController navController;
 

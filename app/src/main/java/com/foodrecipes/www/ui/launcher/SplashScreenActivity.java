@@ -1,4 +1,4 @@
-package com.foodrecipes.www;
+package com.foodrecipes.www.ui.launcher;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -6,9 +6,6 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.foodrecipes.www.databinding.ActivitySplashScreenBinding;
-import com.foodrecipes.www.launcher.LauncherActivity;
 
 import java.util.Objects;
 
@@ -22,7 +19,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setShowHideAnimationEnabled(false);
         getSupportActionBar().hide();
 
-        ActivitySplashScreenBinding binding = ActivitySplashScreenBinding.inflate(getLayoutInflater());
+        com.foodrecipes.www.databinding.ActivitySplashScreenBinding binding = com.foodrecipes.www.databinding.ActivitySplashScreenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         //Ken Burns Effect
