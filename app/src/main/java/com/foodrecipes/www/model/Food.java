@@ -18,6 +18,9 @@ public class Food {
     @ColumnInfo(name = "type")
     private int type;
 
+    @ColumnInfo(name = "specific_type")
+    private int specificType;
+
     @ColumnInfo(name = "food_name")
     private String name;
 
@@ -33,8 +36,9 @@ public class Food {
     @ColumnInfo(name = "image")
     private int image;
 
-    public Food(int type, String name, String mainIngredient, String subIngredient, String process, int image) {
+    public Food(int type, int sType, String name, String mainIngredient, String subIngredient, String process, int image) {
         this.type = type;
+        this.specificType = sType;
         this.name = name;
         this.mainIngredient = mainIngredient;
         this.subIngredient = subIngredient;
