@@ -7,20 +7,23 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 import com.foodrecipes.www.model.Food;
+import com.foodrecipes.www.model.User;
 
-@Database(entities = {Food.class}, version = 1)
-public abstract class FoodDatabase extends RoomDatabase {
+@Database(entities = {Food.class, User.class}, version = 1)
+public abstract class AppDatabase extends RoomDatabase {
 
-    private static volatile FoodDatabase INSTANCE;
+    private static volatile AppDatabase INSTANCE;
 
     public abstract FoodDao foodDao();
+    public abstract UserDao userDao();
 
-    public static FoodDatabase getInstance(Context context) {
+
+    public static AppDatabase getInstance(Context context) {
         if (INSTANCE == null) {
-            synchronized (FoodDatabase.class) {
+            synchronized (AppDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            FoodDatabase.class,
+                            AppDatabase.class,
                             "food.db").build();
                 }
             }

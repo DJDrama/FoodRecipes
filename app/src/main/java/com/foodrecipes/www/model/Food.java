@@ -1,19 +1,16 @@
 package com.foodrecipes.www.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import com.foodrecipes.www.R;
 
 @Entity(tableName = "food")
-public class Food {
-
-    @NonNull
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "food_id")
-    private int id;
+public class Food implements Parcelable {
 
     @ColumnInfo(name = "type")
     private int type;
@@ -21,6 +18,8 @@ public class Food {
     @ColumnInfo(name = "specific_type")
     private int specificType;
 
+    @NonNull
+    @PrimaryKey
     @ColumnInfo(name = "food_name")
     private String name;
 
@@ -50,13 +49,27 @@ public class Food {
         this.image = image;
     }
 
-    public int getId() {
-        return id;
+    protected Food(Parcel in) {
+        type = in.readInt();
+        specificType = in.readInt();
+        name = in.readString();
+        mainIngredient = in.readString();
+        subIngredient = in.readString();
+        process = in.readString();
+        image = in.readInt();
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public static final Creator<Food> CREATOR = new Creator<Food>() {
+        @Override
+        public Food createFromParcel(Parcel in) {
+            return new Food(in);
+        }
+
+        @Override
+        public Food[] newArray(int size) {
+            return new Food[size];
+        }
+    };
 
     public int getType() {
         return type;
@@ -112,5 +125,21 @@ public class Food {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(type);
+        parcel.writeInt(specificType);
+        parcel.writeString(name);
+        parcel.writeString(mainIngredient);
+        parcel.writeString(subIngredient);
+        parcel.writeString(process);
+        parcel.writeInt(image);
     }
 }

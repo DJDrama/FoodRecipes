@@ -3,7 +3,6 @@ package com.foodrecipes.www.ui.launcher;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +20,6 @@ import io.reactivex.schedulers.Schedulers;
 public class SplashScreenActivity extends AppCompatActivity {
     private static final String TAG = SplashScreenActivity.class.getSimpleName();
 
-    private ViewModelFactory mViewModelFactory;
     private SplashScreenViewModel mViewModel;
     private final CompositeDisposable mDisposable = new CompositeDisposable();
 
@@ -37,7 +35,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         //ViewModel
-        mViewModelFactory = Injection.provideViewModelFactory(this);
+        SplashScreenViewModelFactory mViewModelFactory = Injection.provideSplashScreenViewModelFactory(this);
         mViewModel = new ViewModelProvider(this, mViewModelFactory).get(SplashScreenViewModel.class);
 
         //Ken Burns Effect
@@ -46,6 +44,12 @@ public class SplashScreenActivity extends AppCompatActivity {
         //1.5 seconds
 //        int splashDisplayTime = 3000;
 //        new Handler().postDelayed(this::navigateToLauncherActivity, splashDisplayTime);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mDisposable.clear();
     }
 
     @Override

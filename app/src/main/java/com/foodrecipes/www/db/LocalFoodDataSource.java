@@ -7,6 +7,7 @@ import java.util.List;
 
 import io.reactivex.Completable;
 import io.reactivex.Flowable;
+import io.reactivex.Maybe;
 
 public class LocalFoodDataSource implements FoodDataSource {
     private final FoodDao foodDao;
@@ -16,7 +17,7 @@ public class LocalFoodDataSource implements FoodDataSource {
     }
 
     @Override
-    public Flowable<List<Food>> getFoodByType(int type) {
+    public Maybe<List<Food>> getFoodByType(int type) {
         return foodDao.getFoodByType(type);
     }
 

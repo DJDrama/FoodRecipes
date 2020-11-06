@@ -9,4 +9,6 @@
     <string name="chinese_description">면요리, 고기요리, 혼합요리</string>
     <string name="japanese">일식</string>
     <string name="japanese_description">덮밥, 돈가스, 면요리</string>
+    <string name="food_list">음식 리스트</string>
+    <string name="detail">자세히</string>
 </resources>

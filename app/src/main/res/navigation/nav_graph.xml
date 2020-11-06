@@ -9,5 +9,30 @@
         android:id="@+id/mainFragment"
         android:name="com.foodrecipes.www.ui.main.MainFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_foodListFragment"
+            app:destination="@id/foodListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodListFragment"
+        android:name="com.foodrecipes.www.ui.main.FoodListFragment"
+        android:label="@string/food_list"
+        tools:layout="@layout/fragment_food_list">
+        <argument
+            android:name="type"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_foodListFragment_to_foodDetailFragment"
+            app:destination="@id/foodDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodDetailFragment"
+        android:name="com.foodrecipes.www.ui.main.FoodDetailFragment"
+        android:label="@string/detail"
+        tools:layout="@layout/fragment_food_detail" >
+        <argument
+            android:name="food"
+            app:argType="com.foodrecipes.www.model.Food" />
+    </fragment>
 </navigation>

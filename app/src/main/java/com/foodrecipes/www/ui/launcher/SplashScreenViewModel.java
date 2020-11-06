@@ -11,12 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.reactivex.Completable;
-import io.reactivex.disposables.Disposable;
 
 public class SplashScreenViewModel extends ViewModel {
 
     private final FoodDataSource mDataSource;
-    private Food mFood;
 
     public SplashScreenViewModel(FoodDataSource dataSource) {
         this.mDataSource = dataSource;
@@ -61,7 +59,7 @@ public class SplashScreenViewModel extends ViewModel {
                 Constants.KOREAN_KIMCHI,
                 "총각김치",
                 "총각무 2kg, 실파 300g, 갓 300g, 대파(흰부분) 50g, 마늘(다진것) 50g, 생강(다진것) 20g, 소금 65g, 설탕 25g, 멸치젓국 120g, 새우젓 120g, 고춧가루 80g, 찹쌀가루(찹쌀풀) 25g, 물(찹쌀풀) 200ml, 소금(찹쌀풀) 25g",
-                null,
+                "없음",
                 "1. 총각무는 잔털을 떼고 무청 달린 부분의 껍질을 도려 내어 깨끗이 씻고 소금을 고루 뿌려서 절여 물에 살짝 헹궈 소쿠리에 건져 물기를 뺀다.\n" +
                         "\n" +
                         "2. 실파, 갓은 다듬어서 무를 절이는 도중에 함께 넣어 절여서 살짝 씻어 건진다.\n" +
@@ -140,7 +138,7 @@ public class SplashScreenViewModel extends ViewModel {
                 Constants.KOREAN_SOUP,
                 "순두부찌개",
                 "순두부 81.8g, 달걀 15.6g, 배추김치 12g, 바지락 8.4g, 양파 8.4g, 파 4.2g, 고춧가루 1.4g, 마늘 1.4g, 소금 0.6g",
-                null,
+                "없음",
                 "1. 멸치, 무, 대파, 다시마를 넣고 다시 국물을 준비한다.\n" +
                         "\n" +
                         "2. 뚝배기에 식용유와 고춧가루를 넣고 고추기름을 만든다.\n" +
@@ -197,7 +195,7 @@ public class SplashScreenViewModel extends ViewModel {
                 Constants.KOREAN_BULGOGI,
                 "오삼 불고기",
                 "갑오징어, 삼겹살, 대파 한단,양파 반개, 청양고추3~5개, 다진마늘2술, 고춧가루2술, 간장2술, 액젓1술, 설탕1~2술, 참기름, 후춧가루, 깨소금",
-                null,
+                "없음",
                 "1. 갑오징어는 껍질을 벗기고, 삼겹살은 한입 크기로 손질한다.\n" +
                         "\n" +
                         "2. 삼겹살, 오징어에 고춧가루, 간장, 설탕을 넣고 볶아준다.\n" +
@@ -306,7 +304,7 @@ public class SplashScreenViewModel extends ViewModel {
                         "5. 냄비에 버터를 녹이고 밀가루가 갈색이 나도록 볶다가 우유와 물을 붓고 멍울 없이 풀어 끓인다. 우스터소스, 토마토 홀, 토마토케첩을 넣고 월계수잎을 넣어 걸쭉한 농도가 되도록 끓인다. 마지막에 꿀과 소금으로 간을 해서 스테이크소스를 완성한다.\n" +
                         "\n" +
                         "6. 접시에 리소토를 적당하게 담고 햄버그스테이크를 한 조각씩 올린 후 스테이크소스를 듬뿍 뿌리고 오이피클과 할라피뇨를 얹어 상에 낸다.",
-                R.drawable.chopsteak
+                R.drawable.hambak
         ));
 
         foodList.add(new Food(
@@ -324,7 +322,7 @@ public class SplashScreenViewModel extends ViewModel {
                         "4. 끓는 소금물에 스파게티면을 넣고 포장지에 적힌 시간대로 삶는다. 체에 밭쳐 물기를 뺀다.(삶은 스파게티면에 올리브유를 버무려두면 서로 달라붙는 것을 방지할 수 있다.) \n" +
                         "\n" +
                         "5. 3에 삶은 스파게티를 넣고 잘 볶는다. 불을 끄고 생 바질을 넣고 가볍게 버무린다.(생 바질 대신 건조 바질을 사용해도 된다.)",
-                R.drawable.chopsteak
+                R.drawable.tomato
         ));
 
         foodList.add(new Food(
@@ -352,7 +350,7 @@ public class SplashScreenViewModel extends ViewModel {
                 Constants.YANGSIK_PASTA,
                 "봉골레 파스타",
                 "모시조개 900g, 이탈리아파슬리 2줄기, 다진 양파 100g, 마늘 20g, 화이트와인 200㎖, 스파게티 500g, 올리브유 90㎖, 버터 40g, 레몬즙 20㎖, 통후추 8개, 소금, 후추",
-                null,
+                "없음",
                 "1. 살아 있는 조개를 찬물에 담가 4시간 정도 해감한다.\n" +
                         "\n" +
                         "2. 냄비에 조개와 와인을 넣고 5분 정도 끓여 조개가 벌어지면 건져서 살을 반만 발라놓고 국물은 고운체에 걸러놓는다. 입이 벌어지지 않는 조개는 버린다.\n" +
@@ -364,7 +362,7 @@ public class SplashScreenViewModel extends ViewModel {
                         "5. 소스 팬에 올리브유 4큰술을 넣고 다진 양파와 마늘, 파슬리 일부를 넣고 볶다가 조개주스를 넣고 반으로 졸인 후 조갯살을 넣고 끓이면서 나머지 파슬리와 으깬 후추를 넣고 레몬즙과 버터, 소금, 후추로 간을 한다.\n" +
                         "\n" +
                         "6. 삶은 면을 건져 물기를 뺀 다음 올리브유 2큰술과 조개소스를 넣고 버무려 접시에 담고 다진 파슬리와 으깬 통후추를 뿌려 제공한다.",
-                R.drawable.bonara
+                R.drawable.bongole
         ));
 
         foodList.add(new Food(
@@ -372,7 +370,7 @@ public class SplashScreenViewModel extends ViewModel {
                 Constants.YANGSIK_PASTA,
                 "알리올리오 파스타",
                 "스파게티면 170g, 마늘 6쪽, 페페론치노 3개(또는 건고추 2개), 이탈리안 파슬리(생략가능) 약간, 올리브오일 5큰술, 스파게티 삶은 물 1/3컵, 소금 약간, 후춧가루 약간",
-                null,
+                "없음",
                 "1. 마늘은 편으로 썰고, 페페론치노와 이탈리안 파슬리는 굵게 다져준다.\n" +
                         "\n" +
                         "2. 물 8컵에 굵은소금 1큰술을 넣고 스파게티면을 6분 정도 삶고, 넓은 그릇에 펼친 후 올리브오일을 뿌려준다. (면 삶은 물 1/3컵은 남긴다.)\n" +
@@ -390,7 +388,7 @@ public class SplashScreenViewModel extends ViewModel {
                 Constants.YANGSIK_PIZZA,
                 "콤비네이션 피자",
                 "피자반죽 180g, 토마토소스 60㎖, 피자치즈 140g, 양파 10g, 피망 10g, 양송이 10g, 안초비 3g, 올리브 5g, 페페로니 20g, 체리토마토 2개",
-                null,
+                "없음",
                 "1. 채소와 올리브ㆍ페페로니는 슬라이스하고, 안초비는 다지고, 체리토마토는 4등분한다.\n" +
                         "\n" +
                         "2. 도우를 얇게 밀어 직경 26㎝ 팬에 패닝하여 20분가량 발효 후 포크로 듬성듬성 구멍을 낸다.\n" +
@@ -426,7 +424,7 @@ public class SplashScreenViewModel extends ViewModel {
                 Constants.CHINESE_NODDLE,
                 "짜장면",
                 "중화생면 180g, 돼지고기, 오징어 다리, 알새우, 양파, 애호박, 대파, 오이, 다진생강1큰술, 간장 2큰술, 식용유 2큰술, 춘장 2큰술, 황두장 1큰술, 설탕 1큰술, 굴소스 1큰술, 감자전분 1큰술, 치킨스톡 1큰술",
-                null,
+                "없음",
                 "1. 양파, 돼지고기, 애호박을 깍둑썰기 하고 오이를 얇게 썰어둔다. \n" +
                         "\n" +
                         "2. 잘게 썬 오징어 다리와 알새우는 데친 후 찬물에 씻는다. \n" +
@@ -468,7 +466,7 @@ public class SplashScreenViewModel extends ViewModel {
                 Constants.CHINESE_NODDLE,
                 "울면",
                 "우동 건면 1/2인분, 칵테일 새우 2마리, 대왕오징어다리/가문어, 양배추, 양파 1/4개, 팽이버섯, 목이버섯, 부추, 물 500ml, 치킨스톡 1큐브(5g), 조개다시 2/3 큰술, 물 100ml, 녹말 2큰술 ",
-                null,
+                "없음",
                 "1. 가문어와 오징어 다리를 물에 담가둔다. \n" +
                         "\n" +
                         "2. 우동면을 끓는물에 5분 삶아 건지고 다른 재료들도 손질하여 준비한다.\n" +
@@ -478,7 +476,7 @@ public class SplashScreenViewModel extends ViewModel {
                         "4. 물 500ml에 치킨스톡 1개, 조개다시 2/3큰술을 넣고 끓으면 버섯을 넣는다.\n" +
                         "\n" +
                         "5. 미리 삶아둔 면과 부추를 넣고 미리 풀어둔 녹말물을 넣어 한번 끓으면 저어준다. ",
-                R.drawable.jambong
+                R.drawable.wool
         ));
 
         foodList.add(new Food(
@@ -504,7 +502,7 @@ public class SplashScreenViewModel extends ViewModel {
                 Constants.CHINESE_GOGI,
                 "라조육",
                 "돼지고기 목살 300g, 표고버섯 2개, 피망 1/2개, 대파 10g, 녹말 1큰술, 홍고추 1개, 계란 1개, 마늘 5쪽, 생강즙, 고추기름 1큰술, 간장 2큰술, 청주 1큰술, 육수 2/3컵, 참기름 1큰술, 다진파 약간, 소금 약간 ",
-                null,
+                "없음",
                 "1. 돼기고기는 한입 크기로 썬 후 간장, 다진 파, 생강즙, 소금을 조금 넣고 주물러서 20분 정도 재워둔다\n" +
                         "\n" +
                         "2. 피망, 표고버섯, 대파, 홍고추는 납작하게 편썰어 준비한다. \n" +
@@ -651,7 +649,7 @@ public class SplashScreenViewModel extends ViewModel {
                 Constants.JAPANESE_DUPBAP,
                 "스테이크 덮밥",
                 "양파 1개, 스테이크용 고기 300g, 무순, 와사비, 간장 1큰술, 쯔유 1큰술, 올리고당 1큰술, 계란, 소금",
-                null,
+                "없음",
                 "1. 고기에 소금을 뿌린후 10~15분간 숙성시킨다.\n" +
                         " \n" +
                         "2. 간장, 쯔유, 올리고당, 물을 넣고 소스를 준비한다. \n" +
@@ -728,7 +726,7 @@ public class SplashScreenViewModel extends ViewModel {
                         "7. 24시간 동안 잘 끓인 육수를 냄비에 붓고 팔팔 끓여 그릇에 담고 미소된장과 들깻가루, 라유를 넣고 잘 섞는다. \n" +
                         "\n" +
                         "8. 끓는 물에 일본라멘면을 넣고 3분을 익혀 건진 뒤 그릇에 면을 담고 조린 고기와 다진 대파를 올린 뒤 김을 꽂는다.",
-                R.drawable.woodong
+                R.drawable.ramen
         ));
 
         foodList.add(new Food(
@@ -759,7 +757,7 @@ public class SplashScreenViewModel extends ViewModel {
                         "11. 냄비에 소바용 다시물, 조미료를 넣고 10분 정도 중탕해 카케다시(국물)를 만드는데, 이렇게 하면 조미료의 맛이 한층 부드러워진다. 오리는 여분의 기름과 힘줄을 제거하고 껍질면에 칼집을 넣는다. 달군 프라이팬에 오리의 껍질면이 아랫면이 되도록 넣는다. 중간 불에서 구워 색이 입혀지면 꺼내어 뜨거운 물을 뿌린 뒤 물기를 제거해 얇게 자른다. 실파는 사선으로 가늘게 자른다.\n" +
                         "\n" +
                         "12. 소바는 충분한 양의 뜨거운 물에서 삶는다. 삶아지면 체에 건져내어 흐르는 물로 헹궈 녹말기를 제거한다. 물기를 제거한 뒤 1인분씩 소바를 데운다. 카케다시에 오리를 더해 살짝 끓인다. 그릇에 소바를 넣고 카케다시를 부은 후 오리, 실파, 산초가루를 뿌린다.",
-                R.drawable.woodong
+                R.drawable.soba
         ));
 
         return foodList;

@@ -6,10 +6,11 @@ import java.util.List;
 
 import io.reactivex.Completable;
 import io.reactivex.Flowable;
+import io.reactivex.Maybe;
 
 public interface FoodDataSource {
 
-    Flowable<List<Food>> getFoodByType(int type);
+    Maybe<List<Food>> getFoodByType(int type);
 
     Completable insertFoodList(List<Food> foodList);
 }
